@@ -79,19 +79,7 @@ document.querySelectorAll('#contenidoPDF p').forEach(p => {
 });
 }
 
-document.getElementById('inputFirmaArrendatario').addEventListener('change', function(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(ev) {
-    const img = document.getElementById('firmaArrendatario');
-    img.src = ev.target.result;
-    img.style.display = 'block';
-    // Oculta el input para que no se pueda subir otra imagen
-    document.getElementById('inputFirmaArrendatario').style.display = 'none';
-  };
-  reader.readAsDataURL(file);
-});
+
 
 
 
